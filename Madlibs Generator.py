@@ -7,7 +7,7 @@ start_of_word = -1
 target_start = "<"
 target_end = ">"
 
-# Extract placeholders
+# Extract the placeholders
 for i, char in enumerate(story):
     if char == target_start:
         start_of_word = i
@@ -23,9 +23,8 @@ for i in words:
     answer = input(f"Enter a word for {i}: ")
     answers[i] = answer
 
-# Replace placeholders in the story
+# Replace placeholders
 for word in words:
     story = story.replace(word, answers[word])
 
-# Print the final story
 print(story)
